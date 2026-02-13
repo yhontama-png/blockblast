@@ -66,7 +66,7 @@ function App() {
     const piece = pieces[dragPieceIndex];
     if (!piece) return;
 
-    const cell = getBoardCell(e.clientX, e.clientY - 60);
+    const cell = getBoardCell(e.clientX, e.clientY);
     if (!cell) {
       setGhostPos(null);
       return;
@@ -206,7 +206,7 @@ function App() {
           <span className="score-label">SCORE</span>
           <span className="score-value">{score}</span>
         </div>
-        <h1 className="game-title">BLOCK BLAST</h1>
+        <h1 className="game-title">BLOCK BLAST!</h1>
         <div className="score-box">
           <span className="score-label">BEST</span>
           <span className="score-value best">{highScore}</span>
@@ -237,7 +237,7 @@ function App() {
               const style: React.CSSProperties = {};
               if (cell && !isClear) {
                 style.backgroundColor = cell.color;
-                style.boxShadow = `inset 0 -2px 4px rgba(0,0,0,0.3), inset 0 2px 4px rgba(255,255,255,0.15)`;
+                style.boxShadow = `inset 0 -2px 4px rgba(0,0,0,0.1), inset 0 2px 4px rgba(255,255,255,0.6)`;
               }
               if (isClear && cell) {
                 style.backgroundColor = '#fff';
@@ -275,7 +275,7 @@ function App() {
                       className={`piece-cell ${filled ? 'filled' : ''}`}
                       style={filled ? {
                         backgroundColor: piece.color,
-                        boxShadow: `inset 0 -1px 3px rgba(0,0,0,0.3), inset 0 1px 3px rgba(255,255,255,0.15)`,
+                        boxShadow: `inset 0 -1px 3px rgba(0,0,0,0.1), inset 0 1px 3px rgba(255,255,255,0.6)`,
                       } : undefined}
                     />
                   ))
@@ -289,13 +289,13 @@ function App() {
       {gameOver && (
         <div className="game-over-overlay">
           <div className="game-over-modal">
-            <h2>Game Over</h2>
+            <h2>Oops!</h2>
             <p className="final-score">{score}</p>
             {score >= highScore && score > 0 && (
               <p className="new-best">New Best!</p>
             )}
             <button className="play-again-btn" onClick={resetGame}>
-              Play Again
+              Try Again
             </button>
           </div>
         </div>

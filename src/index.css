@@ -4,19 +4,25 @@
   padding: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
+
 :root {
-  --bg-primary: #1a1b2e;
-  --bg-secondary: #252742;
-  --bg-cell: #2a2d4a;
-  --bg-cell-border: #363960;
-  --text-primary: #ffffff;
-  --text-secondary: #8b8fad;
-  --accent: #6c5ce7;
+  --bg-primary: #fef0f5;
+  --bg-secondary: #fff5f9;
+  --bg-cell: #fce4ec;
+  --bg-cell-border: #f8bbd0;
+  --text-primary: #5d4157;
+  --text-secondary: #b07d9e;
+  --accent: #e891b9;
 }
 
 body {
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family: 'Nunito', 'Segoe UI', system-ui, -apple-system, sans-serif;
   background: var(--bg-primary);
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(255, 182, 193, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(186, 220, 255, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(255, 218, 185, 0.3) 0%, transparent 50%);
   color: var(--text-primary);
   min-height: 100dvh;
   display: flex;

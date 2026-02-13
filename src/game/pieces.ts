@@ -1,16 +1,16 @@
 import type { Piece } from "./types";
 
 const COLORS = [
-  '#FF6B6B', // red
-  '#4ECDC4', // teal
-  '#45B7D1', // blue
-  '#96CEB4', // green
-  '#FFEAA7', // yellow
-  '#DDA0DD', // plum
-  '#FF8C42', // orange
-  '#6C5CE7', // purple
-  '#A8E6CF', // mint
-  '#FF85A2', // pink
+  '#FFB3BA', // pastel pink
+  '#BAE1FF', // pastel blue
+  '#BAFFC9', // pastel green
+  '#FFE4BA', // pastel peach
+  '#E8BAFF', // pastel lavender
+  '#FFBAE1', // pastel rose
+  '#BAF2FF', // pastel sky
+  '#FFF1BA', // pastel lemon
+  '#D4BAFF', // pastel violet
+  '#FFD4BA', // pastel coral
 ];
 
 interface PieceDef {
